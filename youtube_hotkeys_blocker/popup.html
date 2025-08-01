@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>YouTube Hotkeys Blocker</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans JP", sans-serif; margin: 12px; width: 340px; }
+      h1 { font-size: 16px; margin-bottom: 8px; }
+      label { font-size: 14px; }
+      small { color: #555; }
+      .section { margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; }
+      .key-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+      .key-grid label { border: 1px solid #ccc; padding: 4px 6px; border-radius: 4px; cursor: pointer; user-select: none; }
+      .key-grid input { margin-right: 4px; }
+      .row { margin-top: 6px; }
+    </style>
+  </head>
+  <body>
+    <h1>YouTube Hotkeys Blocker</h1>
+    <div class="row">
+      <label><input type="checkbox" id="enabled"> 有効化（Enable）</label>
+      <select id="blockWhen">
+        <option value="always">常に（All pages）</option>
+        <option value="watchOnly">動画ページのみ（/watch）</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <p>ブロックするキー（個別に選択可）</p>
+      <div class="key-grid" id="keyGrid"></div>
+      <small>※ Altキーを押しながらの入力は常に許可されます（緊急回避）。<br>※ 入力欄・検索欄ではブロックしません。</small>
+    </div>
+
+    <div class="section">
+      <button id="reset">デフォルトに戻す</button>
+      <button id="save">保存</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
