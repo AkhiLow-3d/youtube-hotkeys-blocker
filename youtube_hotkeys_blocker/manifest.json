@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "YouTube Hotkeys Blocker",
-  "version": "1.0.0",
-  "description": "Disable YouTube's built-in keyboard shortcuts (configurable).",
+  "version": "1.0.3",
+  "description": "Disable specific YouTube shortcuts while watching tutorials",
   "permissions": [
     "storage"
   ],
